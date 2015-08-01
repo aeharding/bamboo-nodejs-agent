@@ -4,7 +4,7 @@ MAINTAINER Alexander Harding <aeharding@software.dell.com>
 # install our dependencies and nodejs
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \
     apt-get update && \
-    apt-get -y install git
+    apt-get -y install git graphicsmagick
 
 # Install Node
 RUN   \
