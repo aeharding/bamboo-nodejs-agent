@@ -16,8 +16,8 @@ RUN   \
   ln -s /opt/node/bin/* . && \
   rm -f /opt/node-v0.12.2-linux-x64.tar.gz
 
-
-
 RUN npm install -g gulp bower
 
-# ADD bamboo-capabilities.properties /root/bamboo-agent-home/bin/bamboo-capabilities.properties
+ADD install-ruby.sh /
+
+RUN /install-ruby.sh
