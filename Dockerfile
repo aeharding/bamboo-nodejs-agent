@@ -21,3 +21,5 @@ RUN npm install -g gulp bower
 ADD install-ruby.sh /
 
 RUN /install-ruby.sh
+
+ADD bamboo-capabilities.properties /root/bamboo-agent-home/bin/bamboo-capabilities.properties 
