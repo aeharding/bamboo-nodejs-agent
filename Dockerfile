@@ -16,6 +16,7 @@ RUN   \
   ln -s /opt/node/bin/* . && \
   rm -f /opt/node-v4.2.1-linux-x64.tar.gz
 
+RUN npm install -g npm
 RUN npm install -g gulp bower coffeelint eslint
 
 ADD setup.sh /
