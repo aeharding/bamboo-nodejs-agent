@@ -1,6 +1,9 @@
 FROM atlassian/bamboo-base-agent
 MAINTAINER Alexander Harding <aeharding@software.dell.com>
 
+# install make for node-gyp
+RUN apt-get update && apt-get -y install build-essential
+
 # install our dependencies and nodejs
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list && \
     apt-get update && \
