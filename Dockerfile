@@ -18,8 +18,8 @@ RUN   \
 
 RUN npm install -g gulp bower coffeelint eslint
 
-ADD install-ruby.sh /
+ADD setup.sh /
 
-RUN /install-ruby.sh
+RUN /setup.sh
 
 ADD bamboo-capabilities.properties /root/bamboo-agent-home/bin/bamboo-capabilities.properties
