@@ -1,5 +1,5 @@
 FROM atlassian/bamboo-base-agent
-MAINTAINER Alexander Harding <aeharding@software.dell.com>
+MAINTAINER Alexander Harding <alexander.harding@software.dell.com>
 
 # install make for node-gyp
 RUN apt-get update && apt-get -y install build-essential
@@ -19,8 +19,9 @@ RUN   \
   ln -s /opt/node/bin/* . && \
   rm -f /opt/node-v4.2.1-linux-x64.tar.gz
 
-RUN npm install -g npm
-RUN npm install -g gulp bower coffeelint eslint
+RUN npm config set prefix /usr/local && \
+    npm install -g npm && \
+    npm install -g gulp bower coffeelint eslint
 
 ADD setup.sh /
 
